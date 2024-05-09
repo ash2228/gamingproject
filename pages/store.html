@@ -19,5 +19,23 @@
         <h1>Store</h1>
         <input type="search" placeholder="search the store">
     </div>
+    <div class="grid">
+        
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
+    <script>
+        let trend = document.getElementsByClassName("grid")[0];
+        let content;
+        axios.get ('https://iitmgamingproject.000webhostapp.com/fetchData.php')
+    .then(response=>{
+        content=response.data;
+        for (let index = 0; index < content.length; index++) {
+            trend.innerHTML += `<div><img src="${content[index].image}"></img><br><span style="white-space:nowrap">${content[index].games}</span></br><span>₹${content[index].cost}</span></div>`;
+        }
+    })
+    .catch(err=>{
+        console.log(err);
+    })
+    </script>
 </body>
 </html>
