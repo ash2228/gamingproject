@@ -10,3 +10,7 @@ axios.get ('https://iitmgamingproject.000webhostapp.com/fetchData.php')
     .catch(err=>{
         console.log(err);
     })
+
+const redi = ()=>{
+    window.location.href = "/pages/store.html"
+}
