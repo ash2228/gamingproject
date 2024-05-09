@@ -1,6 +1,6 @@
 let trend = document.getElementsByClassName("trend")[0];
 let content;
-axios.post ('https://iitmgamingproject.000webhostapp.com/fetchData.php')
+axios.get ('https://iitmgamingproject.000webhostapp.com/fetchData.php')
     .then(response=>{
         content=response.data;
         for (let index = 0; index < 5; index++) {
