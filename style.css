@@ -9,13 +9,16 @@ body{
 nav{
     position: absolute;
     top: 0;
-    height: 100vh;
+    height: 120vh;
     background-color: #27273F;
     width: 80px;
     display: flex;
     list-style: none;
     flex-direction: column;
     align-items: center;
+}
+nav>a:first-child{
+    border-radius: 20px 0px 0px 0px;
 }
 nav>a{
     height: 32px;
@@ -30,11 +33,12 @@ nav>a{
     position: absolute;
     height: 72px;
     background-color: #27273F;
-    width: 100vw;
+    width: 100%;
     display: flex;
     list-style: none;
     align-items: center;
     z-index: -20; 
+    overflow: hidden;
 }
 .nav2>h1{
     margin-left: 100px;
@@ -114,4 +118,21 @@ nav>a{
     .hot{
         overflow-x: scroll;
     }
+    .trend{
+        overflow: scroll;
+    }
 }
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(0, 0, 0); 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #27273F; 
+    border-radius: 10px;
+    border: 1px solid black;
+  }
+  ::-webkit-scrollbar {
+    width: 20px;
+  }
