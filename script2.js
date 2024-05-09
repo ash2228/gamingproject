@@ -12,5 +12,5 @@ axios.get ('https://iitmgamingproject.000webhostapp.com/fetchData.php')
     })
 
 const redi = ()=>{
-    window.location.href = "/pages/store.html"
+    window.location.href = "pages/store.html"
 }
